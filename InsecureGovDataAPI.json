@@ -580,14 +580,78 @@
         "UserProfile": {
           "type": "object",
           "properties": {
+            "username": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            },
+            "role": {
+              "type": "string"
+            },
             "id": {
               "type": "string"
             },
-            "name": {
-              "type": "string"
+            "phones": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "number": {
+                    "type": "string"
+                  },
+                  "active": {
+                    "type": "boolean"
+                  },
+                  "registration_date": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "emirate": {
+                    "type": "string"
+                  }
+                }
+              }
             },
-            "email": {
-              "type": "string"
+            "cars": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "plate_number": {
+                    "type": "string"
+                  },
+                  "emirate": {
+                    "type": "string"
+                  },
+                  "registration_date": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "renewal_date": {
+                    "type": "string",
+                    "format": "date"
+                  }
+                }
+              }
+            },
+            "banks": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "iban": {
+                    "type": "string"
+                  },
+                  "bank_name": {
+                    "type": "string"
+                  },
+                  "registration_date": {
+                    "type": "string",
+                    "format": "date"
+                  }
+                }
+              }
             }
           },
           "title": "UserProfile"
